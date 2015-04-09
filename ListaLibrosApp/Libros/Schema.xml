@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Libros" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Libros" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x01008CCBF5BECC464340B28749D092A68B7A" Name="TipoLibro" Group="Custom Content Types" Description="My Content Type" Inherits="TRUE" Version="0"><FieldRefs><FieldRef ID="{904840eb-1524-4999-a20e-4508f396d07a}" DisplayName="Titulo" Required="TRUE" Name="Titulo" /><FieldRef ID="{fc0e67ec-e681-431b-a28c-fb3185db876c}" DisplayName="Descripcion" Required="FALSE" Name="Descripcion" /><FieldRef ID="{45ad70c5-6c76-4ab4-b9d9-0b8f92ace4ad}" DisplayName="Edicion" Required="TRUE" Name="Edicion" /><FieldRef ID="{b2729e49-469f-48db-84f4-f765453fb541}" DisplayName="Precio" Required="True" Name="Precio" /><FieldRef ID="{165ec01f-186a-4018-aeb8-8726e94b774e}" DisplayName="Disponibilidad" Required="True" Name="Disponibilidad" /></FieldRefs></ContentType></ContentTypes>
+    <Fields>
+      
+    <Field ID="{904840eb-1524-4999-a20e-4508f396d07a}" Name="Titulo" DisplayName="Titulo" Type="Text" Required="TRUE" Group="Custom Site Columns"></Field><Field ID="{fc0e67ec-e681-431b-a28c-fb3185db876c}" Name="Descripcion" DisplayName="Descripcion" Type="Note" Required="FALSE" Group="Custom Site Columns"></Field><Field ID="{45ad70c5-6c76-4ab4-b9d9-0b8f92ace4ad}" Name="Edicion" DisplayName="Edicion" Type="Number" Required="TRUE" Group="Custom Site Columns"></Field><Field ID="{b2729e49-469f-48db-84f4-f765453fb541}" Name="Precio" DisplayName="Precio" Type="Currency" Required="True" Group="Custom Site Columns"></Field><Field ID="{165ec01f-186a-4018-aeb8-8726e94b774e}" Name="Disponibilidad" DisplayName="Disponibilidad" Type="Boolean" Required="True" Group="Custom Site Columns"></Field></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="Titulo" /><FieldRef Name="Descripcion" /><FieldRef Name="Edicion" /><FieldRef Name="Precio" /><FieldRef Name="Disponibilidad" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

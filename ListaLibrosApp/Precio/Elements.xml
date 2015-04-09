@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{b2729e49-469f-48db-84f4-f765453fb541}"
+       Name="Precio"
+       DisplayName="Precio"
+       Type="Currency"
+       Required="True"
+       Group="Custom Site Columns">
+  </Field>
+</Elements>

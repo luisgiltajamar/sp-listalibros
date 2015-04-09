@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E8472FF-2977-4650-B876-19C0BD212C1E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ListaLibrosApp</RootNamespace>
+    <AssemblyName>ListaLibrosApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>12.1</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{19ad19ec-af32-49cf-9eec-703c7503ed29}</AppFeaturePartId>
+    <WspPartId>{2dec99db-e80b-46d4-8308-347e39652c9e}</WspPartId>
+    <WorkflowPartId>{cd87cb1f-16dd-4a9e-8257-e12316b4bf3b}</WorkflowPartId>
+    <CspkgPartId>{33906bf5-4eec-45ba-b917-0dce7d79254c}</CspkgPartId>
+    <SqlPackagePartId>{d8a6f904-9e6e-470d-af52-b3f3cfabb543}</SqlPackagePartId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Descripcion\Elements.xml" />
+    <Content Include="Disponibilidad\Elements.xml" />
+    <Content Include="Edicion\Elements.xml" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Libros\Elements.xml" />
+    <Content Include="Libros\LibrosInstance\Elements.xml" />
+    <Content Include="Libros\Schema.xml" />
+    <Content Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </Content>
+    <Content Include="Precio\Elements.xml" />
+    <Content Include="TipoLibro\Elements.xml" />
+    <Content Include="Titulo\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ListaLibrosAppWeb\ListaLibrosAppWeb.csproj">
+      <Project>{7DB0B01D-0312-4EB0-8023-41EBBDE75FC0}</Project>
+      <Name>ListaLibrosAppWeb</Name>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <OutputItemType>SharePointWebProjectOutput</OutputItemType>
+      <RoleName>ListaLibrosAppWeb</RoleName>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Descripcion\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9e36185e-2a0d-433d-babf-90bba8f1eb98}</SharePointProjectItemId>
+    </None>
+    <None Include="Disponibilidad\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f4af8a07-013e-48ea-984f-07b8fcb228e7}</SharePointProjectItemId>
+    </None>
+    <None Include="Edicion\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c6e78afa-d530-42b8-a772-c3b59e27d9fa}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{8e3f2ae3-6261-4080-973d-648f2405a0d8}</FeatureId>
+    </None>
+    <None Include="Libros\LibrosInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{68e1c2ad-ea53-445b-aeec-a53cf8ddfc5e}</SharePointProjectItemId>
+    </None>
+    <None Include="Libros\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c2ad4813-0772-4529-83d3-c2e610f75a2b}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{bdb1e690-6f3f-4ae3-baa4-125c8150b62f}</PackageId>
+    </None>
+    <None Include="Precio\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e2c0bc9b-ab69-445f-8905-d530d6155af4}</SharePointProjectItemId>
+    </None>
+    <None Include="TipoLibro\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{aa6b69fd-f624-4939-b003-beafb2ac148b}</SharePointProjectItemId>
+    </None>
+    <None Include="Titulo\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{58c1103b-420c-473b-9ea2-930640939ed8}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

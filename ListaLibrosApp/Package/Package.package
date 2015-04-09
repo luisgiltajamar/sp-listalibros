@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="82f9df00-2ed3-41b6-866c-eeec26323065" solutionId="82f9df00-2ed3-41b6-866c-eeec26323065" resetWebServer="false" sharePointProductVersion="16.0" name="ListaLibrosApp" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="8e3f2ae3-6261-4080-973d-648f2405a0d8" />
+  </features>
+</package>

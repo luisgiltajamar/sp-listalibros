@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{165ec01f-186a-4018-aeb8-8726e94b774e}"
+       Name="Disponibilidad"
+       DisplayName="Disponibilidad"
+       Type="Boolean"
+       Required="True"
+       Group="Custom Site Columns">
+  </Field>
+</Elements>
